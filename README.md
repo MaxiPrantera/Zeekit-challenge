@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+<h1>Zeekit Frontend Challenge</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Prueba técnica de Zeekit con React y Tailwindcss
 
-Currently, two official plugins are available:
+<h2>Gameplay and rules:</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of the game is to guess a TV show´s name
 
-## Expanding the ESLint configuration
+The player will see a placeholder for a TV name with some missing letter. The player should guess and fill
+in the TV show´s name.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+If the player guesses successfully a tv show name, it gets a point and moves forward to guess another tv show name.
 
-- Configure the top-level `parserOptions` property like this:
+The player would be able to use a hint feature in case it´s stuck with a specific TV show.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+The player has a total of 3 life points. For each wrong guess, it loses a point. If the player lost all 3 points the game is over and can be started again.
+
+<h2>App requirements</h2>
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Use this API: `https://developers.themoviedb.org/3/getting-started/introduction`
+- Fetch the data from here: `https://developers.themoviedb.org/3/tv/get-top-rated-tv`
+- The main page contains:
+   - Generated TV name with missing letters to fill
+   - An input component, where the player enters its guess
+   - "Check the guess" button
+   - "Hint" button
+
+
